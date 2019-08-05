@@ -7,4 +7,4 @@ addons:
       secure: "$sonarcloud_token"
 script: |
   mvn test &&\
-  mvn org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=sunxuia_travis-ci-study -Dsonar.host.url=https://sonarcloud.i
+  mvn org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=sunxuia_travis-ci-study -Dsonar.host.url=https://sonarcloud.io
