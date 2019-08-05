@@ -31,4 +31,12 @@ public class IndexControllerTests {
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_PLAIN))
                 .andExpect(content().string("ok"));
     }
+
+    @Test
+    public void testTest() throws Exception {
+        mockMvc.perform(get("/test?paraKey=test value"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_PLAIN))
+                .andExpect(content().string("test value"));
+    }
 }
