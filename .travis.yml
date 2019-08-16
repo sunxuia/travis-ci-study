@@ -14,7 +14,7 @@ before_script:
   - sudo mysql_upgrade
   - echo 'mysql version is ' `mysql --version`
   # 创建数据库和用户
-  - mysql -u root -e 'CREATE DATABASE tst_db;'
-  - mysql -u root -e "CREATE USER 'tst_user'@'localhost' IDENTIFIED BY '123456';"
-  - mysql -u root -e "GRANT ALL ON tst_db.* TO 'tst_user'@'localhost';"
+  - mysql -u root -e 'CREATE DATABASE tstdb;'
+  - mysql -u root -e "CREATE USER 'tstuser'@'localhost' IDENTIFIED BY '123456';"
+  - mysql -u root -e "GRANT ALL ON tstdb.* TO 'tstuser'@'localhost';"
 script: mvn test -Dspring.profiles.active=tst
