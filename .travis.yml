@@ -1,7 +1,7 @@
 language: java
 install: true
-#services:
-#  - mysql
+services:
+  - redis-server
 sudo: true
 before_script:
   # 安装最新版mysql.

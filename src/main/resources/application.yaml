@@ -5,3 +5,9 @@ spring:
     username: devuser
     password: 123456
     initializationMode: NEVER
+  redis:
+    database: 2
+    host: 192.168.21.25
+    port: 6379
+    timeout: 3s
+    repositories.enable: false
