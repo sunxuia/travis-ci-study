@@ -1,8 +1,3 @@
 language: java
 install: true
-addons:
-  sonarcloud:
-    organization: "sunxuia"
-    token:
-      secure: "$sonarcloud_token"
-script: chomod +x travis/build.sh && travis/build.sh
+script: chmod +x travis/build.sh && travis/build.sh
