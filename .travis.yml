@@ -5,6 +5,4 @@ addons:
     organization: "sunxuia"
     token:
       secure: "$sonarcloud_token"
-script: |
-  mvn test &&\
-  mvn org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=sunxuia_travis-ci-study
+script: travis/build.sh
