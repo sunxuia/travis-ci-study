@@ -1,3 +1,7 @@
 language: java
 install: true
-script: chmod +x travis/build.sh && travis/build.sh
+env:
+  global:
+    secure: eQYZcCig+JG5gZVMF+9NvZDPkEnZQo03P6eexrRj3dZ0qJ/jnvqcnVzVtRNU+juSa4wnqO6lydJ7h+ER413Fs0VS7k4UtI0GSPAZ12c+cN3HdG2AfiV5Rvy1Smtf8cZ1xJ+AVdTcka/81326SiY6pL/3unzT+t9aihtpOih6J2tjOPPSGhpBk2tyy9cTA+X04YWJoT19fmURszoL7ax4J09H62Z8Tf0B2U2WBxx/9RtNGzyucQ8A5irC+y/XxOjJ9A8HWoZs5V6mlJ+rszVVorecLePvs2eKVLOmfk6WqzeGqIoaqvqQ+r3b/YtJN3STPEL7dh+omJU531BuOcVaJ+SAC
+      /FV6yCB8hr990f1ZSxtCAw95A4kgJLxN+XCvvqOnMRe6X3DwJziQ9INivZlgadqHOU/FQ8qU/Pxn2TkhRVBTBDKbQqOuy4MscqLL9BAmlyJoRJci8kdR/VD/kQVcWxsMUmeJN6UKp9c23k3IwXD7ngDyHy4kk9i93XnNPfHSoZBG2tvPAlOL7LSAEVi6zMzuBsJ3FN0qb7MiYOfS6pBbytM3b7UFov9qLaMnKhC44xYp3bFcWWEIfZuwNfGo0h6GY0orHYxp+sTXlOfznvFM9Di1KYrhrnggNAU1pEG/M9PAJQ5WmpU4vGvZnZjBJW+bcs9BA0LVkBv96U5HjI=
+script: echo password is $key
