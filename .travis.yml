@@ -5,4 +5,4 @@ addons:
     organization: "sunxuia"
     token:
       secure: "$sonarcloud_token"
-script: travis/build.sh
+script: chomod +x travis/build.sh && travis/build.sh
