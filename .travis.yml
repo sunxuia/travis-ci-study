@@ -1,8 +1,13 @@
+# 指定语言
 language: java
 install: true
+sudo: true
 services:
   - redis-server
-sudo: true
+# 指定jdk, 可以指定多个, 指定多个的时候会分别在这些jdk 上运行script
+jdk:
+  - openjdk11
+  - openjdk12
 before_script:
   # 安装最新版mysql.
   # 最新版本查看 : https://dev.mysql.com/downloads/repo/apt/
@@ -17,4 +22,7 @@ before_script:
   - mysql -u root -e 'CREATE DATABASE tstdb;'
   - mysql -u root -e "CREATE USER 'tstuser'@'localhost' IDENTIFIED BY '123456';"
   - mysql -u root -e "GRANT ALL ON tstdb.* TO 'tstuser'@'localhost';"
-script: mvn test -Dspring.profiles.active=tst
+script: |
+  chomod +x travis/build.sh &&\
+  travis/build.sh &&\
+  mvn test -Dspring.profiles.active=tst
